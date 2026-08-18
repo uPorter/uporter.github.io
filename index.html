@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'" />
+    <meta name="theme-color" content="#fbfbf9" />
+    <meta name="description" content="Seam Tools — focused interactive systems by Seam Agency." />
+    <title>Seam Tools</title>
+    <link rel="icon" href="./assets/socially-mascot-BHlD1bBX.svg" type="image/svg+xml" />
+    <script>
+      const root = document.documentElement;
+      root.classList.add("js");
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) root.classList.add("reduced-motion");
+      try {
+        const storedTheme = window.localStorage.getItem("sociially:theme");
+        const themeId = storedTheme === "dark" ? "nocturne" : storedTheme;
+        const themeModes = { paper: "light", nocturne: "dark", cobalt: "dark", atelier: "light", mint: "light", "amber-crt": "dark" };
+        if (themeModes[themeId]) {
+          root.dataset.theme = themeModes[themeId];
+          root.dataset.themeName = themeId;
+        }
+      } catch {
+        // Paper remains the usable default when storage is unavailable.
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index-D1DQKaJ0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BQLlZHvP.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This showcase needs JavaScript to run its interactive previews.</noscript>
+  </body>
+</html>
