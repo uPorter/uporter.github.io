@@ -1,0 +1,62 @@
+.intro[data-porty] {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  column-gap: 14px;
+  row-gap: 14px;
+  padding-top: 44px;
+}
+
+.intro[data-porty] h1 {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  margin-bottom: 0;
+  padding-right: 36px;
+}
+
+.intro[data-porty] .lede {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.porty-head {
+  appearance: none;
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  display: block;
+  width: 64px;
+  aspect-ratio: 12 / 13;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  color: var(--color-text-primary, currentColor);
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.porty-head:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 3px;
+}
+
+.porty-head__sprite {
+  position: absolute;
+  inset: -8px 0 8px;
+  display: block;
+  background-image: url('./porty-sprites.webp');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 600% 300%;
+  pointer-events: none;
+  transform-origin: 50% 60%;
+}
+
+@media (width <= 640px) {
+  .intro[data-porty] {
+    padding-top: 22px;
+  }
+}

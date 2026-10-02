@@ -1,0 +1,12 @@
+{
+  "name": "seam-tools-local",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5174 --strictPort",
+    "check": "node --check porty/porty-head.js && node --check porty/mount.js && node --check porty/avatar-math.js"
+  },
+  "devDependencies": {
+    "vite": "7.3.6"
+  }
+}
